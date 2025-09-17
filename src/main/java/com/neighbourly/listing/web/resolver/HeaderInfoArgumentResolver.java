@@ -1,7 +1,7 @@
-package com.neighbourly.user.web.resolver;
+package com.neighbourly.listing.web.resolver;
 
-import com.neighbourly.user.constants.REQUIRED_HEADERS;
-import com.neighbourly.user.dto.HeaderInfo;
+
+import com.neighbourly.listing.dto.HeaderInfo;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.MissingRequestHeaderException;

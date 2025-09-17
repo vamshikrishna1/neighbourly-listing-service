@@ -1,4 +1,4 @@
-package com.neighbourly.user.web.config;
+package com.neighbourly.listing.web.config;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;

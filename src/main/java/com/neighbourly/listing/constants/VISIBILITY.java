@@ -1,4 +1,4 @@
-package com.neighbourly.constants;
+package com.neighbourly.listing.constants;
 
 public enum VISIBILITY {
     ALL,

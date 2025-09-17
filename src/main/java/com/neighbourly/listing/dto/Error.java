@@ -1,4 +1,4 @@
-package com.neighbourly.user.dto;
+package com.neighbourly.listing.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

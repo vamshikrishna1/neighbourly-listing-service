@@ -1,4 +1,4 @@
-package com.neighbourly.user.constants;
+package com.neighbourly.listing.constants;
 
 import lombok.Getter;
 
