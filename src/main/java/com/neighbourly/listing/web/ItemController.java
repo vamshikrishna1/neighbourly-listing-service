@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/items")
 @RequiredArgsConstructor
@@ -19,6 +21,17 @@ public class ItemController {
     public ResponseEntity<Response<ItemDto>> getItemById(@PathVariable Long id, HeaderInfo headers) {
         ItemDto itemDto = itemService.getItemById(id);
         Response<ItemDto> response = Response.<ItemDto>builder().data(itemDto).uuid(headers.getUuid()).build();
+        return ResponseEntity.ok(response);
+    }
+
+
+    @GetMapping
+    public ResponseEntity<Response<List<ItemDto>>> getAllItems(HeaderInfo headers, @RequestParam(required = false) List<String> filterByCategories,
+                                                               @RequestParam(required = false) Long filterByUserCommunity,
+                                                               @RequestParam(required = false) List<Long> filterByConditions,
+                                                               @RequestParam(required = false) List<Long> filterByCommunities) {
+        List<ItemDto> items = itemService.getAllItems();
+        Response<List<ItemDto>> response = Response.<List<ItemDto>>builder().data(items).uuid(headers.getUuid()).build();
         return ResponseEntity.ok(response);
     }
 

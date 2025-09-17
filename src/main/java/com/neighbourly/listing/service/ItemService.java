@@ -10,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class ItemService {
@@ -21,9 +23,6 @@ public class ItemService {
     public ItemDto getItemById(Long id) {
        Item item = itemRepository.findById(id).orElseThrow(() -> new ItemNotFoundException("Item not found"));
         return itemMapper.toDto(item);
-
-
-
     }
 
 
@@ -44,5 +43,10 @@ public class ItemService {
         Item existingItem = itemRepository.findById(id).orElseThrow(() -> new ItemNotFoundException("Item not found"));
         Item updatedItem = itemMapper.toEntity(itemDto, existingItem);
         return itemMapper.toDto(updatedItem);
+    }
+
+    public List<ItemDto> getAllItems() {
+        List<Item> items = itemRepository.findAll();
+        return itemMapper.toDtoList(items);
     }
 }
