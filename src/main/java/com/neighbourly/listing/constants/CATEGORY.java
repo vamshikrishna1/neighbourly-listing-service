@@ -1,0 +1,24 @@
+package com.neighbourly.listing.constants;
+
+public enum CATEGORY {
+    ELECTRONICS,
+    FURNITURE,
+    CLOTHING,
+    BOOKS,
+    TOYS,
+    SPORTS,
+    BEAUTY,
+    AUTOMOTIVE,
+    HOME_APPLIANCES,
+    GARDENING,
+    PET_SUPPLIES,
+    MUSIC_INSTRUMENTS,
+    ART_CRAFTS,
+    OFFICE_SUPPLIES,
+    HEALTH_WELLNESS,
+    BABY_PRODUCTS,
+    FOOD_BEVERAGES,
+    TRAVEL_ACCESSORIES,
+    JEWELRY,
+    OTHER
+}

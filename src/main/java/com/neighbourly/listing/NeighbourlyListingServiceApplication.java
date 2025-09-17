@@ -1,4 +1,4 @@
-package com.neighbourly.neighbourly_listing_service;
+package com.neighbourly.listing;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
